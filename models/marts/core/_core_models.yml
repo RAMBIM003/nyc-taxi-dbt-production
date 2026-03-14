@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_taxi_zones
+    description: >
+      A cleaned, business-ready dimension table representing NYC Taxi Zones. 
+      This is the source of truth for all zone-based joins in the warehouse.
+    columns:
+      - name: location_id
+        description: "The unique surrogate key for each taxi zone."
+        tests:
+          - unique
+          - not_null
+      - name: borough_name
+        description: "The standardized name of the NYC borough (Title Case)."
+      - name: zone_name
+        description: "The specific neighborhood or airport name within a borough."
+      - name: service_zone_type
+        description: "The classification of the zone (e.g., Yellow, Boro, Airports)."

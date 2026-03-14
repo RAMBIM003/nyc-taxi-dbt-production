@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_taxi_zones
+    description: "Cleaned and standardized taxi zone data"
+    columns:
+      - name: location_id
+        description: "Primary key for taxi zones"
+        tests:
+          - unique
+          - not_null
+      - name: borough_name
+        description: "Cleaned name of the NYC Borough"

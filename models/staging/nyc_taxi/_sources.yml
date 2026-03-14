@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: seed_data
+    schema: analytics
+    description: "Raw CSV data loaded via dbt seeds"
+    tables:
+      - name: taxi_zone_lookup
+        description: "The original NYC Taxi Zone lookup table"
+        columns:
+          - name: '"LocationID"'  
+            description: "The raw primary key from the source CSV"
+            tests:
+              - unique
+              - not_null

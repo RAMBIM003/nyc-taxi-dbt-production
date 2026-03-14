@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: mart_borough_zone_counts
+    description: >
+      Analytical mart used by the Marketing team to understand the density 
+      of taxi coverage across NYC. It aggregates zones at the Borough level.
+    columns:
+      - name: borough_name
+        description: "The primary grouping attribute for NYC territory."
+      - name: total_zones
+        description: "The count of distinct taxi zones assigned to this borough."
