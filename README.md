@@ -25,6 +25,11 @@ This separation ensures clean data governance and maintainable transformations.
 
 Your structure:
 
+
+
+
+
+
 nyc_taxi_production/
 │
 ├── macros/
@@ -54,6 +59,11 @@ nyc_taxi_production/
 ├── dbt_project.yml
 ├── README.md
 └── .env
+
+
+
+
+
 
 
 
